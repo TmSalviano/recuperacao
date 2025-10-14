@@ -1,9 +1,7 @@
 
-maximum = None
-print(f"Max: ", maximum)
+list = [ 3, 2, 52, 32, 43, 21, 35]
 
-for itervar in [0, 3, 25, 23, 21, 42]:
-    if maximum is None or itervar > maximum:
-        maximum = itervar
-        print(f"New Maximum: {maximum}")
-print(f"Overall Maximum: {maximum}")
+print(len(list))
+print(sum(list))
+print(min(list))
+print(max(list))
