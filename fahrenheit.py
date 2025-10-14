@@ -1,7 +1,14 @@
+list = []
 
-list = [ 3, 2, 52, 32, 43, 21, 35]
+while True:
+    number = input() 
+    try:
+        if number == "done":
+            break
+        list.append(int(number))
+    except Exception as e:
+        print(f"Not a number or {e}")
+        continue
 
-print(len(list))
-print(sum(list))
-print(min(list))
 print(max(list))
+print(min(list))
