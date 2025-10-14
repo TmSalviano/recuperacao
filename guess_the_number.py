@@ -3,6 +3,7 @@ import random
 number = random.randint(0, 100)
 attempts = 5
 
+print("You have 5 attempts to guess a number from 0 to 100")
 
 while attempts > 0:
     try:
