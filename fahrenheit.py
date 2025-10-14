@@ -1,6 +1,4 @@
 
-while True:
-    line = input("> ")
-    if line == "done":
-        break
-    print(line)
+family = ["Ronaldo", "Mary", "Giovana"]
+for person in family:
+    print(f"Happy birthday: {person}")
