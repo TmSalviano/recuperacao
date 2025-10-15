@@ -1,5 +1,5 @@
 
-l = []
+l = list()
 
 while True:
     num = input()
