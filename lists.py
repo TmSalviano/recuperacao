@@ -1,10 +1,9 @@
 
-l = [1, 2, 3, [1,2, 3, 4,5], 5]
-l[3] = 4
+l = ['a', 'b', 'c']
+another_list = ['d', 'e', 'f']
+another_list.extend(l)
+another_list.sort()
 
-print(l)
-
-
-l[:2] = [10, 9]
-
-print(l)
+b_item = another_list.pop(1)
+print(another_list)
+print("Here is the letter b: " + b_item)
