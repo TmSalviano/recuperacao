@@ -1,9 +1,6 @@
 
-l = list()
 
-while True:
-    num = input()
-    if num == "done":
-        print("Average: ", (sum(l) / len(l)))
-        break 
-    l.append(float(num))
+handle = open("mbox.txt")
+for line in handle:
+    if not line.startswith("From ") : continue
+    print(line.split()[2])
