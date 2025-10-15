@@ -1,7 +1,8 @@
 handle = open("mbox.txt")
 
-count = 0
-for line in handle:
-    count+=1 
 
-print(count)
+for line in handle:
+    if line.startswith("From: "):
+        print(line.strip("\n"))
+
+handle.close()
