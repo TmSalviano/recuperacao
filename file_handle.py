@@ -1,3 +1,7 @@
+handle = open("mbox.txt")
 
-string = "Y\nX"
-print(string)
+count = 0
+for line in handle:
+    count+=1 
+
+print(count)
