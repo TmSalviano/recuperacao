@@ -1,16 +1,8 @@
+d = {'a':10, 'b':1, 'c':22}
 
-s = "This string will be decorated sorted and then undecorated"
+al = list()
+for key, value in d.items():
+    al.append((value, key))
 
-l = list()
-
-for word in s.split():
-    l.append((len(word), word)) 
-
-l.sort(reverse=True)
-
-res = list()
-for length, word in l:
-    res.append(word)
-
-print(res)
-
+al.sort(reverse=True)
+print(al)
