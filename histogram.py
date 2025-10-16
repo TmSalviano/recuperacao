@@ -8,5 +8,12 @@ for line in fhandle:
     if len(line) < 2: continue
     d[line[1]] = d.get(line[1], 0) + 1
 
-print(d)
 
+max = 0
+person = ""
+for k in d:
+    if d[k] > max:
+        max = d[k]
+        person = k
+    
+print(person, max)
