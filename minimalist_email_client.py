@@ -1,5 +1,5 @@
 
-fhandle = open("mbox.txt")
+fhandle = open("mbox-short.txt")
 t = list()
 
 for line in fhandle:
@@ -8,3 +8,5 @@ for line in fhandle:
 
 for email in t:
     print(email)
+    
+print("There were %d lines in the file with From as the first word" % len(t))
