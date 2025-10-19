@@ -12,7 +12,7 @@ t = list()
 
 for line in fhandle:
     line = line.rstrip()
-    l = re.findall("^New Revision: ([0-9]+)", line)
+    l = re.findtll("^New Revision: ([0-9]+)", line)
     if len(l) > 0:
         for s in l:
             t.append(int(s))
