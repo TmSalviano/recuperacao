@@ -1,14 +1,14 @@
-import socket
+import urllib.request, urllib.parse, urllib.error
 
-pr43_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-pr43_sock.connect(('data.pr4e.org', 80))
-cmd = b'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'
-pr43_sock.send(cmd)
+img = urllib.request.urlopen('http://data.pr4e.org/cover3.jpg')
+fhand = open("cover3.jpg", "wb")
+size = 0
 
 while True:
-    data = pr43_sock.recv(512)
-    if len(data) < 1:
-        break
-    print(data.decode(), end='')
+    info = img.read(100000)   
+    if len(info) < 1 : break
+    size += len(info)
+    fhand.write(info)
 
-pr43_sock.close()
+print(size, "characters copied")
+fhand.close()
